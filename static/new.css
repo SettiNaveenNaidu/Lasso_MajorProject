@@ -1,125 +1,60 @@
-*{
-    padding: 0;
-    margin: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-  }
-  .navi{
-    font-family: montserrat;
-  }
-  nav{
-    background: #0082e6;
-    height: 80px;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+body{
+ margin:0px;
+ padding:0px;
+}
+.out{
+  display:flex;
+  flex-direction:column;
+}
+nav{
+    height: 50px;
     width: 100%;
-  }
-  label.logo{
-    color: white;
-    font-size: 35px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
-  }
-  nav ul{
+}
+nav{
+  display:flex;
+  flex-direction:row-reverse;;
+}
+nav{
+  background: #0082e6;
+}
+nav ul{
     float: right;
-    margin-right: 20px;
-  }
-  nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-  }
-  nav ul li a{
+    margin-right: 0px;
+}
+nav ul li{
+    display: inline-flex;
+  flex-direction:row;
+}
+nav ul li{
+    line-height: 16px;
+    margin: 3px 3px;
+}
+nav ul li a{
     color: white;
     font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
+    padding: 4px 13px;
+    border-radius: 2px;
     text-transform: uppercase;
-  }
-  a.active,a:hover{
+ 
+}  
+a:link{
+  text-decoration: none;
+}
+a.active,a:hover{
     background: #1b9bff;
     transition: .5s;
-  }
-  .checkbtn{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
-  }
-  #check{
-    display: none;
-  }
-  @media (max-width: 952px){
-    label.logo{
-      font-size: 30px;
-      padding-left: 50px;
-    }
-    nav ul li a{
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 858px){
-    .checkbtn{
-      display: block;
-    }
-    ul{
-      position: fixed;
-      width: 100%;
-      height: 100vh;
-      background: #2c3e50;
-      top: 80px;
-      left: -100%;
-      text-align: center;
-      transition: all .5s;
-    }
-    nav ul li{
-      display: block;
-      margin: 50px 0;
-      line-height: 30px;
-    }
-    nav ul li a{
-      font-size: 20px;
-    }
-    a:hover,a.active{
-      background: none;
-      color: #0082e6;
-    }
-    #check:checked ~ ul{
-      left: 0;
-    }
-  }
-  section{
-    background: url(bg1.jpg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-  }
-
-
-
-
-
-
-
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
-
-.form{
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  background: linear-gradient(135deg, #71b7e6, #9b59b6);
-}
+} 
 .container{
-  max-width: 700px;
-  width: 100%;
+  width: 50%;
+  justify-content: center;
   background-color: #fff;
   padding: 25px 30px;
   border-radius: 5px;
   box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  align-content: center;
+  margin-top: 90px;
+  margin-left: 365px;
 }
 .container .title{
   font-size: 25px;
@@ -138,6 +73,7 @@
 }
 .content form .user-details{
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 20px 0 12px 0;
@@ -166,22 +102,24 @@ form .input-box span.details{
 .user-details .input-box input:valid{
   border-color: #9b59b6;
 }
- form .gender-details .gender-title{
+form .gender-details .gender-title{
   font-size: 20px;
   font-weight: 500;
  }
- form .category{
+form .category{
    display: flex;
+  flex-direction:row;
    width: 80%;
    margin: 14px 0 ;
    justify-content: space-between;
  }
- form .category label{
+form .category label{
    display: flex;
+  flex-direction:row;
    align-items: center;
    cursor: pointer;
  }
- form .category label .dot{
+form .category label .dot{
   height: 18px;
   width: 18px;
   border-radius: 50%;
@@ -220,27 +158,24 @@ form .input-box span.details{
   /* transform: scale(0.99); */
   background: linear-gradient(-135deg, #71b7e6, #9b59b6);
   }
- @media(max-width: 584px){
- .container{
-  max-width: 100%;
+ 
+h3{
+    border-color: black;
 }
-form .user-details .input-box{
-    margin-bottom: 15px;
-    width: 100%;
-  }
-  form .category{
-    width: 100%;
-  }
-  .content form .user-details{
-    max-height: 300px;
-    overflow-y: scroll;
-  }
-  .user-details::-webkit-scrollbar{
-    width: 5px;
-  }
-  }
-  @media(max-width: 459px){
-  .container .content .category{
-    flex-direction: column;
-  }
+
+
+.footer{
+    color: white;
+    display: flex;
+ align-content:center;
+ justify-content:center;
+ background-color:black;
+ }
+.footer div{
+  align-items:center;
+  margin:20px;
+   width:100%;
 }
+
+
+ 
